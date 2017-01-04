@@ -1,9 +1,9 @@
-env = ENV['CRAWLER_ENV'] || 'development'
+CRAWLER_ENV = ENV['CRAWLER_ENV'] || 'development'
 AREA = ENV['AREA_ENV'] || :cn
 
 require 'rubygems'
 require 'bundler'
-Bundler.require(:default, env)
+Bundler.require(:default, CRAWLER_ENV)
 
 $project_root = Pathname.new File.dirname(__FILE__)
 
@@ -18,7 +18,7 @@ def start_ant
     File.basename(path, '.rb').to_s.classify.constantize
   end
   spiders.each do |spiders|
-    if env != 'production'
+    if CRAWLER_ENV != 'production'
       puts spiders.new.pipeline.map &:to_h
     else
       spiders.new.pipeline
