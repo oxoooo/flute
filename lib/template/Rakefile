@@ -1,0 +1,21 @@
+require_relative('./main')
+
+module IRBExtensition
+  def reload!
+    puts 'reloading...'
+    ActiveSupport::Dependencies.clear
+    nil
+  end
+end
+
+task :console do
+  require 'irb'
+  ARGV.clear
+  
+  IRB::ExtendCommandBundle.send :include, IRBExtensition
+  IRB.start
+end
+
+task :start do
+  start_ant
+end
