@@ -18,6 +18,10 @@ def start_ant
     File.basename(path, '.rb').to_s.classify.constantize
   end
   spiders.each do |spiders|
-    puts spiders.new.pipeline
+    if env != 'production'
+      puts spiders.new.pipeline.map &:to_h
+    else
+      spiders.new.pipeline
+    end
   end
 end

@@ -7,8 +7,7 @@ class IfanrSpider < Flute::SpiderBase
   def before_parse(items)
     items.map {|item|
       WebItem.new url: item.url,
-                  title: item.title,
-
+                  title: item.title
     }
   end
 

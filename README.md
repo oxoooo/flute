@@ -9,23 +9,13 @@
 
 ## Installation
 
-Add this line to your application's Gemfile:
-
-```ruby
-gem 'flute'
-```
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
     $ gem install flute
+
+之后可以使用 `flute new project_name` 来创建一个项目。
 
 ## Usage
 
-TODO
+项目包含了一个从爱范儿爬虫例子，可以进行参考，或许会有更多的实际例子发布
 
 
 ## License
