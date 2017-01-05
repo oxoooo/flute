@@ -42,7 +42,7 @@ class FluteCLI < Thor
   end
 
   def template_path(name)
-    File.expand_path("../template/#{name}", File.dirname(__FILE__))
+    File.expand_path("../../template/#{name}", File.dirname(__FILE__))
   end
 end
 

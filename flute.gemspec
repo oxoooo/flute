@@ -29,6 +29,6 @@ Gem::Specification.new do |spec|
   spec.add_dependency 'activesupport', '~> 5.0.1'
   spec.add_dependency 'typhoeus', '~> 1.1.2'
   spec.add_dependency 'nokogiri', '~> 1.7.0'
-  spec.add_dependency 'thor'
+  spec.add_dependency 'thor', '~> 0.19.4'
 
 end
